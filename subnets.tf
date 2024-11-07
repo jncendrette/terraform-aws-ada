@@ -1,4 +1,4 @@
-# Create tf Public Subnets
+# Create Public Subnets
 resource "aws_subnet" "public_subnet_1" {
   vpc_id                  = aws_vpc.terra_aws_vpc.id
   cidr_block              = "10.0.1.0/24"
@@ -29,7 +29,7 @@ resource "aws_subnet" "public_subnet_3" {
   }
 }
 
-# Create tf Private Subnets
+# Create Private Subnets
 resource "aws_subnet" "private_subnet_1" {
   vpc_id            = aws_vpc.terra_aws_vpc.id
   cidr_block        = "10.0.4.0/24"
@@ -57,7 +57,7 @@ resource "aws_subnet" "private_subnet_3" {
   }
 }
 
-# Create tf Private Database Subnets
+# Create Private Database Subnets
 resource "aws_subnet" "private_database_subnet_1" {
   vpc_id            = aws_vpc.terra_aws_vpc.id
   cidr_block        = "10.0.7.0/24"
