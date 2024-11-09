@@ -1,7 +1,3 @@
-data "aws_caller_identity" "current" {
-
-}
-
 locals {
   policy = jsonencode(
 
