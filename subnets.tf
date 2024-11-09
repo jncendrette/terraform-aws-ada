@@ -1,10 +1,10 @@
 # Create Public Subnets
 resource "aws_subnet" "public" {
   count                   = length(var.availability_zones)
-  vpc_id                  = aws_vpc.ada_aws_vpc.id
-  cidr_block              = var.cidr_vpc
-  map_public_ip_on_launch = true
+  vpc_id                  = aws_vpc.main_vpc.id
+  cidr_block              = cidrsubnet(var.cidr_vpc, 4, count.index)
   availability_zone       = var.availability_zones[count.index]
+  map_public_ip_on_launch = true
 
   tags = {
     Name       = "public-subnet-${count.index + 1}"
