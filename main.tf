@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "${var.bucket_name}-${data.aws_caller_identity.current.account_id}"
+    bucket = "bucket-s3-jcendrette-$414860898158"
     key    = "state/terraform.tfstate"
     region = "us-east-1"
 
