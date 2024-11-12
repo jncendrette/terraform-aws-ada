@@ -16,7 +16,7 @@ resource "aws_lb_target_group" "main" {
   name        = "front-end-target-group-${random_id.suffix.hex}"
   port        = 80
   protocol    = "HTTP"
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = aws_vpc.main_vpc.id
   target_type = "instance"
 
   health_check {
@@ -46,7 +46,7 @@ resource "aws_lb_listener" "http" {
 
 
 resource "aws_lb_target_group_attachment" "front_end" {
-  for_each         = { for idx, instance in aws_instance.machine_ec2 : idx => instance }
+  for_each         = { for idx, instance in aws_instance.vm_ec2 : idx => instance }
   target_group_arn = aws_lb_target_group.main.arn
   target_id        = each.value.id
   port             = 80
