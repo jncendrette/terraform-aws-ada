@@ -5,8 +5,10 @@ terraform {
       version = "5.74.0"
     }
   }
+
+  # Sync file terraform.tfstate on S3 Bucket
   backend "s3" {
-    bucket = "bucket-s3-jcendrette-$414860898158"
+    bucket = "bucket-s3-jcendrette-414860898158"
     key    = "state/terraform.tfstate"
     region = "us-east-1"
 
