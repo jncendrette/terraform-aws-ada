@@ -27,13 +27,13 @@ variable "instance_type" {
 }
 
 variable "allocated_storage" {
-  description = "Tamanho de Armazenamento RDS"
+  description = "Armazenamento RDS"
   type        = number
-  default     = 400
+  default     = 100
 }
 
 variable "iops" {
-  description = "Inputs e Outputs"
+  description = "Inputs e Outputs do RDS"
   type        = number
   default     = 3000
 }
