@@ -11,6 +11,7 @@ variable "availability_zones" {
   default     = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
 
+
 # Create variable for bucket name
 variable "bucket_name" {
   description = "Bucket S3 da Aplicação"
@@ -23,4 +24,22 @@ variable "instance_type" {
   description = "Tipo de instância EC2"
   type        = string
   default     = "t3.micro"
+}
+
+variable "allocated_storage" {
+  description = "Tamanho de Armazenamento RDS"
+  type        = number
+  default     = 400
+}
+
+variable "iops" {
+  description = "Inputs e Outputs"
+  type        = number
+  default     = 3000
+}
+
+variable "master_password" {
+  description = "Senha do RDS Mysql"
+  type        = string
+  default     = "Training1!"
 }

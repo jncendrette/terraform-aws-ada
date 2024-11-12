@@ -5,6 +5,12 @@ terraform {
       version = "5.74.0"
     }
   }
+  backend "s3" {
+    bucket = "${var.bucket_name}-${data.aws_caller_identity.current.account_id}"
+    key    = "state/terraform.tfstate"
+    region = "us-east-1"
+
+  }
 }
 
 # Configure the AWS Provider

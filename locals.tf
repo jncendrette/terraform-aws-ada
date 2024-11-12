@@ -12,7 +12,7 @@ locals {
             "Service" : "cloudfront.amazonaws.com"
           },
           "Action" : "s3:GetObject",
-          "Resource" : "arn:aws:s3:::herika-machado-950447966618/*",
+          "Resource" : "arn:aws:s3:::/*",
           "Condition" : {
             "StringEquals" : {
               "AWS:SourceArn" : "arn:aws:cloudfront::${data.aws_caller_identity.current.id}:distribution/ELU0HE6NG0TGP"
