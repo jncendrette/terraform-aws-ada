@@ -1,11 +1,9 @@
  # Infraestrutura AWS com Terraform
 
 
-Este repositório contém o código para criar uma infraestrutura na AWS utilizando Terraform para um  **E-commerce de Produtos Digitais**, startup de vendas online de Produtos Digitais. 
+A arquitetura foi configurado seguindo as práticas recomendadas pelo **AWS Well-Architected Framework** para projetar e operar sistemas confiáveis, seguros, eficientes, econômicos e sustentáveis na nuvem.
 
 O sistema é configurado para **escalar automaticamente** em períodos de alta demanda, como em campanhas de marketing e datas de promoção.
-
-O projeto foi configurado seguindo as práticas recomendadas de arquitetura do AWS **Well-Architected Framework** para projetar e operar sistemas confiáveis, seguros, eficientes, econômicos e sustentáveis na nuvem.
 
 ## Arquitetura do Projeto
 ![alt text](Arch_AWS.png)
@@ -59,4 +57,6 @@ Para destruir os recursos e evitar custos adicionais, execute:
 - [Luiz Campedelli](https://github.com/LuizCampedelli/)
 
 - [José Rodrigues Neto](https://github.com/Neto6391)
+
+
 
